@@ -1,0 +1,278 @@
+<!-- Created by kjjanak on 9.13.16 -->
+<!-- Original code from here - http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>Neptune's Pride Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="kjjanak">
+    <!-- Viewport for Mobile Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/site.css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body id="body">
+    <!-- Main Navigation Menu -->
+    <div class="navFixed"></div>
+    <div class="navHeader clearFix">
+        <i class="navMenu material-icons floatLeft" id="navMenu">menu</i>
+        <h1 class="navTitle">NP</h1>
+    </div>
+
+
+    <!-- Content -->
+    <div class="container">
+        <div class="main clearFix">
+            <!-- CONTAINS BATTLE AND WIN SECTIONS -->
+            <div class="row clearFix">
+                <!-- BATTLE SECTION HERE -->
+                <div class="battleSection section">
+                    <h2 id="showHideBattle" class="sectionTitle">Single Battle
+                        <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
+                    </h2>
+                    <div id="battle" class="sectionWrapper" style="display:none;">
+                        <div class="sectionContent clearFix">
+                            <div class="subSection">
+                                <p>Defender WT:</p>
+                                <input type="number" size="5" maxlength="6" id="defws" value="1" tabindex="4">
+                                <button type="button" class="smallbtn" onclick="increment('defws', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defws', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Attacker WT:</p>
+                                <input type="number" size="5" maxlength="6" id="attws" value="1" tabindex="6">
+                                <button type="button" class="smallbtn" onclick="increment('attws', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attws', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Defender Ships:</p>
+                                <input type="number" size="5" maxlength="6" id="defships" value="0" tabindex="5">
+                                <button type="button" class="smallbtn" onclick="increment('defships', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships', 10);" style="display:none;">+10</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Attacker Ships:</p>
+                                <input type="number" size="5" maxlength="6" id="attships" value="1" tabindex="7">
+                                <button type="button" class="smallbtn" onclick="increment('attships', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships', 10);" style="display:none;">+10</button>
+                            </div>
+                            <button type="button" class="btn floatRight" onclick="battle();" tabindex="8">Start</button>
+                        </div>
+                        <div id="battle_results" class="results clearFix">
+                            <span style="font-weight: bold;" class="resultsText">Results:</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHIPS TO WIN SECTION HERE -->
+                <div class="toWinSection section">
+                    <h2 id="showHideToWin" class="sectionTitle">Ships to Win
+                        <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
+                    </h2>
+                    <div id="toWin" class="sectionWrapper" style="display:none;">
+                        <div class="sectionContent clearFix">
+                            <div class="subSection">
+                                <p>Defender WT:</p>
+                                <input type="number" size="5" maxlength="6" id="defws2" value="1" tabindex="9">
+                                <button type="button" class="smallbtn" onclick="increment('defws2', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defws2', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Attacker WT:</p>
+                                <input type="number" size="5" maxlength="6" id="attws2" value="1" tabindex="11">
+                                <button type="button" class="smallbtn" onclick="increment('attws2', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attws2', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Defender Ships:</p>
+                                <input type="number" size="5" maxlength="6" id="defships2" value="0" tabindex="10">
+                                <button type="button" class="smallbtn" onclick="increment('defships2', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships2', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships2', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defships2', 10);" style="display:none;">+10</button>
+                            </div>
+                            <button type="button" class="btn floatRight" onclick="toAttack();" tabindex="12">Start</button>
+                        </div>
+                        <div id="attack_results" class="results clearFix">
+                            <span style="font-weight: bold;" class="resultsText">Results:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINS VISIBILITY AND DEFEND SECTIONS -->
+            <div class="row clearFix">
+                <!-- SHIPS TO DEFEND SECTION HERE -->
+                <div class="toDefendSection section">
+                    <h2 id="showHideToDefend" class="sectionTitle">Ships to Defend
+                        <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
+                    </h2>
+                    <div id="toDefend" class="sectionWrapper" style="display:none;">
+                        <div class="sectionContent clearFix">
+                            <div class="subSection">
+                                <p>Defender WT:</p>
+                                <input type="number" size="5" maxlength="6" id="defws3" value="1" tabindex="13">
+                                <button type="button" class="smallbtn" onclick="increment('defws3', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defws3', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Attacker WT:</p>
+                                <input type="number" size="5" maxlength="6" id="attws3" value="1" tabindex="14">
+                                <button type="button" class="smallbtn" onclick="increment('attws3', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attws3', 1);" style="display:none;">+1</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Attacker Ships:</p>
+                                <input type="number" size="5" maxlength="6" id="attships3" value="1" tabindex="15">
+                                <button type="button" class="smallbtn" onclick="increment('attships3', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships3', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships3', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('attships3', 10);" style="display:none;">+10</button>
+                            </div>
+                            <button type="button" class="btn floatRight" onclick="toDefend();" tabindex="16">Start</button>
+                        </div>
+                        <div id="defend_results" class="results clearFix">
+                            <span style="font-weight: bold;" class="resultsText">Results:</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TICKS TO VISIBILITY SECTION HERE -->
+                <div class="toVisibileSection section">
+                    <h2 id="showHideToVisible" class="sectionTitle">Ticks to Visibility
+                        <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
+                    </h2>
+                    <div id="toVisible" class="sectionWrapper" style="display:none;">
+                        <div class="sectionContent clearFix">
+                            <p class="white">Given the distance between the attacker and defender's stars, tells how long it will be until the defender can see the incoming fleet. This assumes the star being attacked is the closest one the defender has to the attacker.</p>
+                            <div class="subSection">
+                                <p>Distance:</p>
+                                    <input type="number" size="5" maxlength="6" id="dist" value="1" tabindex="17">
+                            </div>
+                            <div class="subSection">
+                                <p>Scanning:</p>
+                                <input type="number" size="5" maxlength="6" id="defscan" value="1" tabindex="18">
+                                <button type="button" class="smallbtn" onclick="increment('defscan', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('defscan', 1);" style="display:none;">+1</button>
+                            </div>
+                            <!-- Make Visible Later -->
+                            <div id="disthelp" style="display: none;">
+                                <p>Use the distance tool to get the distance between two stars.
+                                    <br>(The keyboard shortcut is V.)
+                                </p>
+                            </div>
+                            <button type="button" class="btn floatRight" onclick="toVisible();" tabindex="19">Start</button>
+                        </div>
+                        <div id="visible_results" class="results clearFix">
+                            <span style="font-weight: bold;" class="resultsText">Results:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINS TECH SECTION -->
+            <div class="row clearFix">
+                <!-- TICKS TO TECH LEVEL -->
+                <div class="toTechSection section">
+                    <h2 id="showHideToTech" class="sectionTitle">Ticks to Tech Level
+                        <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
+                    </h2>
+                    <div id="toTech" class="sectionWrapper" style="display:none;">
+                        <div class="sectionContent clearFix">
+                            <div class="subSection">
+                                <p>Current level:</p>
+                                <input type="number" size="5" maxlength="6" id="currtech" value="1" tabindex="20">
+                                <button type="button" class="smallbtn" onclick="increment('currtech', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('currtech', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('currtech', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('currtech', 10);" style="display:none;">+10</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Goal level:</p>
+                                <input type="number" size="5" maxlength="6" id="goaltech" value="2" tabindex="21">
+                                <button type="button" class="smallbtn" onclick="increment('goaltech', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('goaltech', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('goaltech', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('goaltech', 10);" style="display:none;">+10</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Progress:</p>
+                                <input type="number" size="5" maxlength="6" id="prog" value="0" tabindex="22">
+                                <button type="button" class="smallbtn" onclick="increment('prog', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('prog', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('prog', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('prog', 10);" style="display:none;">+10</button>
+                            </div>
+                            <div class="subSection">
+                                <p>Science:</p>
+                                <input type="number" size="5" maxlength="6" id="science" value="1" tabindex="23">
+                                <button type="button" class="smallbtn" onclick="increment('science', -1);" style="display:none;">-1</button>
+                                <button type="button" class="smallbtn" onclick="increment('science', -10);" style="display:none;">-10</button>
+                                <button type="button" class="smallbtn" onclick="increment('science', 1);" style="display:none;">+1</button>
+                                <button type="button" class="smallbtn" onclick="increment('science', 10);" style="display:none;">+10</button>
+                            </div>
+                            <button type="button" class="btn floatRight" onclick="toTech();" tabindex="24">Start</button>
+                        </div>
+                        <div id="tech_results" class="results clearFix">
+                            <span style="font-weight: bold;" class="resultsText">Results:</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="mainMenu shadow" id="mainMenu">
+        <h3 class="menuTitle">
+            Menu
+            <i id="menuCloseButton" type="button" class="material-icons optbtn floatRight">clear</i>
+        </h3>
+        <div class="mainMenuButton">
+            <a href='/'>Home</a>
+        </div>
+        <div class="mainMenuButton">
+            <a href='../snake'>Snake Game</a>
+        </div>
+        <div id="settingsMenuButton" class="mainMenuButton">
+            <p>Settings</p>
+        </div>
+        <div id="defaultSettings" class="defaultSettings" style="display:none;">
+            <p>Default Weapons Tech (WT):</p>
+            <input type="number" size="3" maxlength="3" id="default" value="1" tabindex="1">
+            <button type="button" class="optbtn menuButton" onclick="setdefault();" tabindex="2">Set default</button> (optional)
+            <br>
+            <button type="button" class="optbtn menuButton" onclick="showhidesecs();" tabindex="3">Show/hide sections</button>
+            <button type="button" class="optbtn menuButton" onclick="showhidebuttons();" tabindex="3">Show/hide increment buttons</button>
+        </div>
+        <div id="aboutMenuButton" class="mainMenuButton">
+            <p>About</p>
+        </div>
+        <p id="aboutText" class="menuInfo" style="display:none;">
+            This is a battle calculator for <a href="http://np.ironhelmet.com/" target="_blank">Neptune's Pride</a>.
+            Source files created by <a href="http://josteinb.com/npCalc/" target="_blank">JosteinB</a> and
+            <a href="http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml" target="_blank">Lee Seitz</a>
+        </p>
+        <p id="menuFooter" class="menuFooter">
+            This website is hosted and operated by <a href="#" target="_blank">KJJanak</a>.
+            Design by <a href="#" target="_blank">DWashburn</a>. Powered by
+            <a href="#" target="_blank">Hampsters.</a>
+        </p>
+    </div>
+</body>
+
+</html>
