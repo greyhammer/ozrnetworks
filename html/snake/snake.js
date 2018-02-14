@@ -120,17 +120,7 @@ window.onload = function() {
     }
 
     function redraw(){
-        len = 4;
-        snakeW = 10;
-        snakeH = 10;
-        score = 4;
-        direction = 'right';
-        len = 4;
-        food = {
-            x : 20,
-            y : 20
-        };
-        draw();
+        window.location.href = 'https://ozrnetworks.com/snake/';
     };
 
     setInterval(draw, speed);
