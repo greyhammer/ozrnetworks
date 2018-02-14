@@ -1,34 +1,34 @@
 <!-- Created by kjjanak on 9.13.16 -->
 <!-- Original code from here - http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml-->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-
-<head>
-    <title>Neptune's Pride Calculator</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="kjjanak">
-    <!-- Viewport for Mobile Responsiveness -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/site.css" media="all">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-</head>
-
-<body id="body">
-    <!-- Main Navigation Menu -->
-    <div class="navFixed"></div>
-    <div class="navHeader clearFix">
-        <i class="navMenu material-icons floatLeft" id="navMenu">menu</i>
-        <h1 class="navTitle">NP</h1>
-    </div>
-
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <!-- META -->
+        <title>Neptune's Pride Calculator</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="description" content="Battle Calculator for Neptunes Pride Strategy Game">
+        <meta name="author" content="kjjanak">
+        <!-- Styles -->
+        <link rel="stylesheet" href="/site.css">
+        <!-- <link rel="stylesheet" href="np-calc.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="np-calc.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/iss">ISS Viewing</a></li>
+            <li><a href="/snake">Snake Game</a></li>
+            <li><a  class="active" href="/neptunes-pride-calculator">NP Calc</a></li>
+            <li style="float:right"><a href="/about">About</a></li>
+        </ul>
+        <div>
+            <h3 class="center-text">Battle Calculator for Neptunes Pride Strategy Game</h3>
+        </div>
 
     <!-- Content -->
     <div class="container">
@@ -236,43 +236,8 @@
         </div>
     </div>
 
-    <div class="overlay" id="overlay"></div>
-    <div class="mainMenu shadow" id="mainMenu">
-        <h3 class="menuTitle">
-            Menu
-            <i id="menuCloseButton" type="button" class="material-icons optbtn floatRight">clear</i>
-        </h3>
-        <div class="mainMenuButton">
-            <a href='/'>Home</a>
-        </div>
-        <div class="mainMenuButton">
-            <a href='../snake'>Snake Game</a>
-        </div>
-        <div id="settingsMenuButton" class="mainMenuButton">
-            <p>Settings</p>
-        </div>
-        <div id="defaultSettings" class="defaultSettings" style="display:none;">
-            <p>Default Weapons Tech (WT):</p>
-            <input type="number" size="3" maxlength="3" id="default" value="1" tabindex="1">
-            <button type="button" class="optbtn menuButton" onclick="setdefault();" tabindex="2">Set default</button> (optional)
-            <br>
-            <button type="button" class="optbtn menuButton" onclick="showhidesecs();" tabindex="3">Show/hide sections</button>
-            <button type="button" class="optbtn menuButton" onclick="showhidebuttons();" tabindex="3">Show/hide increment buttons</button>
-        </div>
-        <div id="aboutMenuButton" class="mainMenuButton">
-            <p>About</p>
-        </div>
-        <p id="aboutText" class="menuInfo" style="display:none;">
-            This is a battle calculator for <a href="http://np.ironhelmet.com/" target="_blank">Neptune's Pride</a>.
-            Source files created by <a href="http://josteinb.com/npCalc/" target="_blank">JosteinB</a> and
-            <a href="http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml" target="_blank">Lee Seitz</a>
-        </p>
-        <p id="menuFooter" class="menuFooter">
-            This website is hosted and operated by <a href="#" target="_blank">KJJanak</a>.
-            Design by <a href="#" target="_blank">DWashburn</a>. Powered by
-            <a href="#" target="_blank">Hampsters.</a>
-        </p>
-    </div>
+            <!-- This is a battle calculator for http://np.ironhelmet.com. Source files created by http://josteinb.com/npCalc and http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml -->
+
 </body>
 
 </html>
