@@ -89,7 +89,7 @@ window.onload = function() {
         var snakeY = snake[0].y;
 
         if (snakeX < 0 || snakeY < 0 || snakeX >= cvsW/snakeW || snakeY >= cvsH/snakeH || checkCollision (snakeX, snakeY, snake)) {
-            ctx.clearRect(0,0,cvsW,cvsH);
+            draw();
         }
 
         if (direction === 'left') snakeX--;
@@ -117,12 +117,6 @@ window.onload = function() {
 
         snake.unshift(newHead);
         drawScore(score);
-    }
-
-    function refresh() {
-        setTimeout(function () {
-            location.reload()
-        }, 100);
     }
 
     setInterval(draw, speed);
