@@ -34,35 +34,35 @@
         <div class="container">
             <div class="battleSection section">
                 <h2>Single Battle</h2>
-                <div id="battle" class="sectionWrapper" style="display:none;">
+                <div id="battle" class="sectionWrapper">
                     <div class="sectionContent">
                         <div class="subSection">
                             <p>Defender WT:</p>
                             <input type="number" size="5" maxlength="6" id="defws" value="1" tabindex="4">
-                            <button type="button" class="smallbtn" onclick="increment('defws', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defws', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Attacker WT:</p>
                             <input type="number" size="5" maxlength="6" id="attws" value="1" tabindex="6">
-                            <button type="button" class="smallbtn" onclick="increment('attws', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attws', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Defender Ships:</p>
                             <input type="number" size="5" maxlength="6" id="defships" value="0" tabindex="5">
-                            <button type="button" class="smallbtn" onclick="increment('defships', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships', 10);">+10</button>
                         </div>
                         <div class="subSection">
                             <p>Attacker Ships:</p>
                             <input type="number" size="5" maxlength="6" id="attships" value="1" tabindex="7">
-                            <button type="button" class="smallbtn" onclick="increment('attships', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships', 10);">+10</button>
                         </div>
                         <button type="button" class="btn floatRight" onclick="battle();" tabindex="8">Start</button>
                     </div>
@@ -75,27 +75,27 @@
                 <h2 id="showHideToWin" class="sectionTitle">Ships to Win
                     <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
                 </h2>
-                <div id="toWin" class="sectionWrapper" style="display:none;">
+                <div id="toWin" class="sectionWrapper">
                     <div class="sectionContent clearFix">
                         <div class="subSection">
                             <p>Defender WT:</p>
                             <input type="number" size="5" maxlength="6" id="defws2" value="1" tabindex="9">
-                            <button type="button" class="smallbtn" onclick="increment('defws2', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defws2', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws2', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws2', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Attacker WT:</p>
                             <input type="number" size="5" maxlength="6" id="attws2" value="1" tabindex="11">
-                            <button type="button" class="smallbtn" onclick="increment('attws2', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attws2', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws2', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws2', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Defender Ships:</p>
                             <input type="number" size="5" maxlength="6" id="defships2" value="0" tabindex="10">
-                            <button type="button" class="smallbtn" onclick="increment('defships2', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships2', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships2', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defships2', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships2', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships2', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships2', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defships2', 10);">+10</button>
                         </div>
                         <button type="button" class="btn floatRight" onclick="toAttack();" tabindex="12">Start</button>
                     </div>
@@ -108,27 +108,27 @@
                 <h2 id="showHideToDefend" class="sectionTitle">Ships to Defend
                     <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
                 </h2>
-                <div id="toDefend" class="sectionWrapper" style="display:none;">
+                <div id="toDefend" class="sectionWrapper">
                     <div class="sectionContent clearFix">
                         <div class="subSection">
                             <p>Defender WT:</p>
                             <input type="number" size="5" maxlength="6" id="defws3" value="1" tabindex="13">
-                            <button type="button" class="smallbtn" onclick="increment('defws3', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defws3', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws3', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defws3', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Attacker WT:</p>
                             <input type="number" size="5" maxlength="6" id="attws3" value="1" tabindex="14">
-                            <button type="button" class="smallbtn" onclick="increment('attws3', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attws3', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws3', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attws3', 1);">+1</button>
                         </div>
                         <div class="subSection">
                             <p>Attacker Ships:</p>
                             <input type="number" size="5" maxlength="6" id="attships3" value="1" tabindex="15">
-                            <button type="button" class="smallbtn" onclick="increment('attships3', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships3', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships3', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('attships3', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships3', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships3', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships3', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('attships3', 10);">+10</button>
                         </div>
                         <button type="button" class="btn floatRight" onclick="toDefend();" tabindex="16">Start</button>
                     </div>
@@ -141,7 +141,7 @@
                 <h2 id="showHideToVisible" class="sectionTitle">Ticks to Visibility
                     <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
                 </h2>
-                <div id="toVisible" class="sectionWrapper" style="display:none;">
+                <div id="toVisible" class="sectionWrapper">
                     <div class="sectionContent clearFix">
                         <p class="white">Given the distance between the attacker and defender's stars, tells how long it will be until the defender can see the incoming fleet. This assumes the star being attacked is the closest one the defender has to the attacker.</p>
                         <div class="subSection">
@@ -151,8 +151,8 @@
                         <div class="subSection">
                             <p>Scanning:</p>
                             <input type="number" size="5" maxlength="6" id="defscan" value="1" tabindex="18">
-                            <button type="button" class="smallbtn" onclick="increment('defscan', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('defscan', 1);" style="display:none;">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defscan', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('defscan', 1);">+1</button>
                         </div>
                         <!-- Make Visible Later -->
                         <div id="disthelp" style="display: none;">
@@ -171,39 +171,39 @@
                 <h2 id="showHideToTech" class="sectionTitle">Ticks to Tech Level
                     <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
                 </h2>
-                <div id="toTech" class="sectionWrapper" style="display:none;">
+                <div id="toTech" class="sectionWrapper">
                     <div class="sectionContent clearFix">
                         <div class="subSection">
                             <p>Current level:</p>
                             <input type="number" size="5" maxlength="6" id="currtech" value="1" tabindex="20">
-                            <button type="button" class="smallbtn" onclick="increment('currtech', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('currtech', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('currtech', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('currtech', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('currtech', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('currtech', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('currtech', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('currtech', 10);">+10</button>
                         </div>
                         <div class="subSection">
                             <p>Goal level:</p>
                             <input type="number" size="5" maxlength="6" id="goaltech" value="2" tabindex="21">
-                            <button type="button" class="smallbtn" onclick="increment('goaltech', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('goaltech', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('goaltech', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('goaltech', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('goaltech', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('goaltech', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('goaltech', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('goaltech', 10);">+10</button>
                         </div>
                         <div class="subSection">
                             <p>Progress:</p>
                             <input type="number" size="5" maxlength="6" id="prog" value="0" tabindex="22">
-                            <button type="button" class="smallbtn" onclick="increment('prog', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('prog', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('prog', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('prog', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('prog', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('prog', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('prog', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('prog', 10);">+10</button>
                         </div>
                         <div class="subSection">
                             <p>Science:</p>
                             <input type="number" size="5" maxlength="6" id="science" value="1" tabindex="23">
-                            <button type="button" class="smallbtn" onclick="increment('science', -1);" style="display:none;">-1</button>
-                            <button type="button" class="smallbtn" onclick="increment('science', -10);" style="display:none;">-10</button>
-                            <button type="button" class="smallbtn" onclick="increment('science', 1);" style="display:none;">+1</button>
-                            <button type="button" class="smallbtn" onclick="increment('science', 10);" style="display:none;">+10</button>
+                            <button type="button" class="smallbtn" onclick="increment('science', -1);">-1</button>
+                            <button type="button" class="smallbtn" onclick="increment('science', -10);">-10</button>
+                            <button type="button" class="smallbtn" onclick="increment('science', 1);">+1</button>
+                            <button type="button" class="smallbtn" onclick="increment('science', 10);">+10</button>
                         </div>
                         <button type="button" class="btn floatRight" onclick="toTech();" tabindex="24">Start</button>
                     </div>
