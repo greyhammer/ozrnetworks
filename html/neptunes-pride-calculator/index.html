@@ -1,5 +1,6 @@
 <!-- Created by kjjanak on 9.13.16 -->
-<!-- Original code from here - http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml-->
+<!-- This is a battle calculator for http://np.ironhelmet.com. -->
+<!-- Source files created by http://josteinb.com/npCalc and http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml -->
 <!DOCTYPE html>
 <html lang="eng">
     <head>
@@ -29,8 +30,6 @@
         <div>
             <h3 class="center-text">Battle Calculator for Neptunes Pride Strategy Game</h3>
         </div>
-
-        <!-- Content -->
         <div class="container">
             <div class="battleSection section">
                 <h2>Single Battle</h2>
@@ -72,11 +71,9 @@
                 </div>
             </div>
             <div class="toWinSection section">
-                <h2 id="showHideToWin" class="sectionTitle">Ships to Win
-                    <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
-                </h2>
+                <h2>Ships to Win</h2>
                 <div id="toWin" class="sectionWrapper">
-                    <div class="sectionContent clearFix">
+                    <div class="sectionContent ">
                         <div class="subSection">
                             <p>Defender WT:</p>
                             <input type="number" size="5" maxlength="6" id="defws2" value="1" tabindex="9">
@@ -99,17 +96,15 @@
                         </div>
                         <button type="button" class="btn floatRight" onclick="toAttack();" tabindex="12">Start</button>
                     </div>
-                    <div id="attack_results" class="results clearFix">
+                    <div id="attack_results" class="results ">
                         <span style="font-weight: bold;" class="resultsText">Results:</span>
                     </div>
                 </div>
             </div>
             <div class="toDefendSection section">
-                <h2 id="showHideToDefend" class="sectionTitle">Ships to Defend
-                    <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
-                </h2>
+                <h2>Ships to Defend</h2>
                 <div id="toDefend" class="sectionWrapper">
-                    <div class="sectionContent clearFix">
+                    <div class="sectionContent ">
                         <div class="subSection">
                             <p>Defender WT:</p>
                             <input type="number" size="5" maxlength="6" id="defws3" value="1" tabindex="13">
@@ -132,17 +127,15 @@
                         </div>
                         <button type="button" class="btn floatRight" onclick="toDefend();" tabindex="16">Start</button>
                     </div>
-                    <div id="defend_results" class="results clearFix">
+                    <div id="defend_results" class="results ">
                         <span style="font-weight: bold;" class="resultsText">Results:</span>
                     </div>
                 </div>
             </div>
             <div class="toVisibileSection section">
-                <h2 id="showHideToVisible" class="sectionTitle">Ticks to Visibility
-                    <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
-                </h2>
+                <h2>Ticks to Visibility</h2>
                 <div id="toVisible" class="sectionWrapper">
-                    <div class="sectionContent clearFix">
+                    <div class="sectionContent ">
                         <p class="white">Given the distance between the attacker and defender's stars, tells how long it will be until the defender can see the incoming fleet. This assumes the star being attacked is the closest one the defender has to the attacker.</p>
                         <div class="subSection">
                             <p>Distance:</p>
@@ -162,17 +155,15 @@
                         </div>
                         <button type="button" class="btn floatRight" onclick="toVisible();" tabindex="19">Start</button>
                     </div>
-                    <div id="visible_results" class="results clearFix">
+                    <div id="visible_results" class="results ">
                         <span style="font-weight: bold;" class="resultsText">Results:</span>
                     </div>
                 </div>
             </div>
             <div class="toTechSection section">
-                <h2 id="showHideToTech" class="sectionTitle">Ticks to Tech Level
-                    <i type="button" class="material-icons optbtn floatRight">keyboard_arrow_down</i>
-                </h2>
+                <h2>Ticks to Tech Level</h2>
                 <div id="toTech" class="sectionWrapper">
-                    <div class="sectionContent clearFix">
+                    <div class="sectionContent ">
                         <div class="subSection">
                             <p>Current level:</p>
                             <input type="number" size="5" maxlength="6" id="currtech" value="1" tabindex="20">
@@ -207,14 +198,11 @@
                         </div>
                         <button type="button" class="btn floatRight" onclick="toTech();" tabindex="24">Start</button>
                     </div>
-                    <div id="tech_results" class="results clearFix">
+                    <div id="tech_results" class="results ">
                         <span style="font-weight: bold;" class="resultsText">Results:</span>
                     </div>
                 </div>
             </div>
         </div>
-            <!-- This is a battle calculator for http://np.ironhelmet.com. Source files created by http://josteinb.com/npCalc and http://home.hiwaay.net/~lkseitz/javascript/npcalc.shtml -->
-
-</body>
-
+    </body>
 </html>
