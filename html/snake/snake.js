@@ -126,7 +126,6 @@ window.onload = function() {
         score = 4;
         direction = 'right';
         len = 4;
-        snake = [];
         food = {
             x : 20,
             y : 20
