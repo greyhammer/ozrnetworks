@@ -120,7 +120,7 @@ window.onload = function() {
     }
 
     function redraw(){
-        window.location.href = 'https://ozrnetworks.com/snake/';
+        location.reload;
     };
 
     setInterval(draw, speed);
