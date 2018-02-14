@@ -120,13 +120,9 @@ window.onload = function() {
     }
 
     function redraw(){
-        for(var i=0; i<snake.length; i++) {
-            var x = snake[i].x;
-            var y = snake[i].y;
-            drawSnake(x,y);
-        }
+        clearInterval(snakeTimer);
         location.reload();
     };
 
-    setInterval(draw, speed);
+    var snakeTimer = setInterval(draw, speed);
 };
