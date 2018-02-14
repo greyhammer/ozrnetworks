@@ -4,47 +4,47 @@
 
 $( document ).ready(function() {
     //Open Main Menu and activate dimmer
-    $('#navMenu').click('click', function (){
-        $('#mainMenu').toggleClass("active");
-        $('#overlay').toggleClass("active");
-        $('#body').toggleClass("hideOverFlow");
-    });
-    $('#menuCloseButton').click('click', function (){
-        $('#mainMenu').toggleClass("active");
-        $('#overlay').toggleClass("active");
-        $('#body').toggleClass("hideOverFlow")
-    });
-    //Click off Menu to close
-    $('#overlay').click('click', function (){
-        $('#mainMenu').toggleClass("active");
-        $('#overlay').toggleClass("active");
-        $('#body').toggleClass("hideOverFlow");
-    });
-    $('#settingsMenuButton').click('click', function (){
-        $('#defaultSettings').slideToggle("fast");
-        $('#settingsMenuButton').toggleClass("active");
-    });
-    $('#aboutMenuButton').click('click', function (){
-        $('#aboutText').slideToggle("fast");
-        $('#aboutMenuButton').toggleClass("active");
-    });
+    // $('#navMenu').click('click', function (){
+    //     $('#mainMenu').toggleClass("active");
+    //     $('#overlay').toggleClass("active");
+    //     $('#body').toggleClass("hideOverFlow");
+    // });
+    // $('#menuCloseButton').click('click', function (){
+    //     $('#mainMenu').toggleClass("active");
+    //     $('#overlay').toggleClass("active");
+    //     $('#body').toggleClass("hideOverFlow")
+    // });
+    // //Click off Menu to close
+    // $('#overlay').click('click', function (){
+    //     $('#mainMenu').toggleClass("active");
+    //     $('#overlay').toggleClass("active");
+    //     $('#body').toggleClass("hideOverFlow");
+    // });
+    // $('#settingsMenuButton').click('click', function (){
+    //     $('#defaultSettings').slideToggle("fast");
+    //     $('#settingsMenuButton').toggleClass("active");
+    // });
+    // $('#aboutMenuButton').click('click', function (){
+    //     $('#aboutText').slideToggle("fast");
+    //     $('#aboutMenuButton').toggleClass("active");
+    // });
 
-    // Show/Hide Sections using slideToggle
-    $('#showHideBattle').click('click', function (){
-        $('#battle').slideToggle("fast");
-    });
-    $('#showHideToWin').click('click', function (){
-        $('#toWin').slideToggle("fast");
-    });
-    $('#showHideToDefend').click('click', function (){
-        $('#toDefend').slideToggle("fast");
-    });
-    $('#showHideToVisible').click('click', function (){
-        $('#toVisible').slideToggle("fast");
-    });
-    $('#showHideToTech').click('click', function (){
-        $('#toTech').slideToggle("fast");
-    });
+    // // Show/Hide Sections using slideToggle
+    // $('#showHideBattle').click('click', function (){
+    //     $('#battle').slideToggle("fast");
+    // });
+    // $('#showHideToWin').click('click', function (){
+    //     $('#toWin').slideToggle("fast");
+    // });
+    // $('#showHideToDefend').click('click', function (){
+    //     $('#toDefend').slideToggle("fast");
+    // });
+    // $('#showHideToVisible').click('click', function (){
+    //     $('#toVisible').slideToggle("fast");
+    // });
+    // $('#showHideToTech').click('click', function (){
+    //     $('#toTech').slideToggle("fast");
+    // });
 });
 
 // Math and Variable Javascript
