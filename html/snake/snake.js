@@ -89,7 +89,7 @@ window.onload = function() {
         var snakeY = snake[0].y;
 
         if (snakeX < 0 || snakeY < 0 || snakeX >= cvsW/snakeW || snakeY >= cvsH/snakeH || checkCollision (snakeX, snakeY, snake)) {
-            draw();
+            redraw();
         }
 
         if (direction === 'left') snakeX--;
@@ -118,6 +118,21 @@ window.onload = function() {
         snake.unshift(newHead);
         drawScore(score);
     }
+
+    function redraw(){
+        len = 4;
+        snakeW = 10;
+        snakeH = 10;
+        score = 4;
+        direction = 'right';
+        len = 4;
+        snake = [];
+        food = {
+            x : 20,
+            y : 20
+        };
+        draw();
+    };
 
     setInterval(draw, speed);
 };
