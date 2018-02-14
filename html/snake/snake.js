@@ -89,7 +89,7 @@ window.onload = function() {
         var snakeY = snake[0].y;
 
         if (snakeX < 0 || snakeY < 0 || snakeX >= cvsW/snakeW || snakeY >= cvsH/snakeH || checkCollision (snakeX, snakeY, snake)) {
-            refresh();
+            ctx.clearRect(0,0,cvsW,cvsH);
         }
 
         if (direction === 'left') snakeX--;
