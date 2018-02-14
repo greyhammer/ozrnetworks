@@ -120,6 +120,7 @@ window.onload = function() {
     }
 
     function redraw(){
+        drawSnake(10,10);
         location.reload();
     };
 
