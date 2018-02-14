@@ -120,7 +120,7 @@ window.onload = function() {
     }
 
     function redraw(){
-        location.reload;
+        location.reload();
     };
 
     setInterval(draw, speed);
