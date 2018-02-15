@@ -1,8 +1,5 @@
 const express       = require('express');
-const bodyParser    = require('body-parser');
 const sh            = require('shelljs');
-
-
 const app           = express();
 const port          = 8080;
 
