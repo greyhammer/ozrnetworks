@@ -1,14 +1,8 @@
-module.exports = function(app) {
-    app.get('/deploy', (req, res) => {
-        console.log('deploy get');
-        res.send('deploy get');
-    });
+module.exports = function(app, sh) {
     app.post('/deploy', (req, res) => {
         console.log('deploy post');
-        res.send('deploy post');
-    });
-    app.put('/deploy', (req, res) => {
-        console.log('deploy post');
+        sh.echo('hello world');
+        sh.exec(../../../bash/deploy-ozrnetworks.sh);
         res.send('deploy post');
     });
 };
