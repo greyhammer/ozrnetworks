@@ -1,11 +1,19 @@
 const express       = require('express');
 const sh            = require('shelljs');
 const app           = express();
-const port          = 8080;
+const apiPort       = 8080;
+const socketPort    = 3000;
 
-require('./routes')(app, sh);
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
-app.listen(port, () => {
-    console.log('We are live on ' + port);
+server.listen(socketPort, () => {
+    console.log('Socket live on ' + socketPort);
+});
+
+require('./routes')(app, sh, io);
+
+app.listen(apiPort, () => {
+    console.log('API live on ' + apiPort);
 });
 
