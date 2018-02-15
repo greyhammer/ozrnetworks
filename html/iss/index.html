@@ -36,14 +36,6 @@
                 <p class="center-text">Audio between Mission Control on the Ground and the ISS can be heard. This is from the left video, if you need to mute it.</p>
             </div>
         </div>
-        <script src="/socket.io/socket.io.js"></script>
-        <script>
-          var socket = io.connect('http://localhost:3000');
-          socket.on('news', function (data) {
-            console.log(data);
-            socket.emit('my other event', { my: 'data' });
-          });
-        </script>
     </body>
 </html>
 
