@@ -18,9 +18,9 @@
             <h3 class="center-text">About OZR Networks </h3>
         </div>
         <p>Comming Soon</p>
-        <script src="https://localhost:3000/socket.io/socket.io.js"></script>
+        <script src="../../node/node_modules/socket.io-client/dist/socket.io.js"></script>
         <script>
-          var socket = io.connect('https://localhost:3000');
+          var socket = io.connect('https://localhost/socket');
           socket.on('news', function (data) {
             console.log(data);
             socket.emit('my other event', { my: 'data' });
