@@ -32,13 +32,9 @@
         <form action="">
           <input id="m" autocomplete="off" /><button>Send</button>
         </form>
-        <script src="../../node/node_modules/socket.io-client/dist/socket.io.js"></script>
+        <script src="localhost:3000/socket.io/socket.io.js"></script>
         <script>
-          var socket = io.connect('https://localhost/socket');
-          socket.on('news', function (data) {
-            console.log(data);
-            socket.emit('my other event', { my: 'data' });
-          });
+          var socket = io();
         </script>
     </body>
 </html>
