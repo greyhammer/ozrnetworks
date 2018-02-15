@@ -6,7 +6,7 @@ var map, marker, last_latlng;
 
 function init() {
     var latlng = new google.maps.LatLng(51.48931, -0.08819);
-    var mapOptions = { center: latlng, zoom: 2, mapTypeId: google.maps.MapTypeId.TERRAIN, disableDefaultUI: false};
+    var mapOptions = { center: latlng, zoom: 3, mapTypeId: google.maps.MapTypeId.TERRAIN, disableDefaultUI: false};
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
     marker = new google.maps.Marker({ position: latlng, map: map, title: "Updating...", icon: 'saticon.gif' });
 }
