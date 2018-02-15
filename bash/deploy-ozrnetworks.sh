@@ -1,3 +1,4 @@
+#!/bin/bash
 cd /var/www/ozrnetworks.com/
 git pull
 cd /var/www/ozrnetworks.com/node
