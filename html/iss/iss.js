@@ -2,6 +2,8 @@ $(document).ready(function() {
     console.log('iss.js loaded');
 });
 
+var socket = io('https://util.ozrnetworks.com:8080');
+
 var map, marker, last_latlng;
 
 function init() {
@@ -36,3 +38,12 @@ function get_latest_position() {
     });
 };
 setInterval(get_latest_position, 1000);
+
+function getUserCount() {
+    $.get( "https://util.ozrnetworks.com:8080", function( data ) {
+        $( ".result" ).html( data );
+        console.log( "Load was performed." );
+    });
+};
+
+setInterval(getUserCount, 1000);
