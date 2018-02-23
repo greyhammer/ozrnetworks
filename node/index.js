@@ -16,7 +16,7 @@ var io = require('socket.io')(https);
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://ozrnetworks');
+    res.setHeader('Access-Control-Allow-Origin', 'https://ozrnetworks.com');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -44,7 +44,7 @@ io.on('connection', function(socket){
 require('./routes')(app, sh);
 
 app.get('/', function(req, res){
-  res.json(usersOnline);
+  res.json({ 'usersOnline': usersOnline});
 });
 
 https.listen(apiPort, () => {
