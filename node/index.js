@@ -4,8 +4,8 @@ const app           = express();
 const apiPort       = 8080;
 const fs            = require('fs');
 
-var privateKey = fs.readFileSync('/etc/letsencrypt/live/util.ozrnetworks.com/privkey.pem');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/util.ozrnetworks.com/fullchain.pem');
+var privateKey = fs.readFileSync('/home/keith/privkey.pem');
+var certificate = fs.readFileSync('/home/keith/fullchain.pem');
 var credentials = {key: privateKey, cert: certificate};
 
 var https = require('https').Server(credentials, app);
