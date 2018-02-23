@@ -41,9 +41,9 @@ setInterval(get_latest_position, 1000);
 
 function getUserCount() {
     $.get( "https://util.ozrnetworks.com:8080", function( data ) {
-        $( ".result" ).html( data );
+        $( "#result" ).text('Users Online = ' + data.usersOnline);
         console.log( "Load was performed." );
-        console.log(data);
+        console.log(data.usersOnline);
     });
 };
 
