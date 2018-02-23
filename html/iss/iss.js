@@ -43,6 +43,7 @@ function getUserCount() {
     $.get( "https://util.ozrnetworks.com:8080", function( data ) {
         $( ".result" ).html( data );
         console.log( "Load was performed." );
+        console.log(data);
     });
 };
 
