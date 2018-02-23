@@ -24,7 +24,7 @@ io.on('connection', function(socket){
 require('./routes')(app, sh);
 
 app.get('/', function(req, res){
-  res.send(usersOnline);
+  res.json(usersOnline);
 });
 
 https.listen(apiPort, () => {
