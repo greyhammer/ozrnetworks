@@ -2,9 +2,14 @@ const express       = require('express');
 const sh            = require('shelljs');
 const app           = express();
 const apiPort       = 8080;
+const fs            = require('fs');
 
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var privateKey = fs.readFileSync('/etc/letsencrypt/live/util.ozrnetworks.com/privkey.pem');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/util.ozrnetworks.com/fullchain.pem');
+var credentials = {key: privateKey, cert: certificate};
+
+var https = require('https').Server(credentials, app);
+var io = require('socket.io')(https);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -22,7 +27,7 @@ io.on('connection', function(socket){
 
 require('./routes')(app, sh);
 
-http.listen(apiPort, () => {
+https.listen(apiPort, () => {
     console.log('API lives on ' + apiPort);
 });
 
