@@ -1,18 +1,14 @@
 name: Docker Image CI
-
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+  - push
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
+    - name: Log in to Docker Hub
+      run: echo ${{ secrets.DockerHubPassword }} | docker login -u kjjanak --password-stdin
     - name: Build the Docker image
       run: docker build -f Dockerfile . -tag kjjanak/ozrweb
+    - name: Push base image
+      run: docker push kjjanak/ozrweb
