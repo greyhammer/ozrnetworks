@@ -60,3 +60,19 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+
+#left
+{
+    float: left;
+}
+
+#mid
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#right
+{
+    float: right;
+}
