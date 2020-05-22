@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8"/>
+        <title>ISS Viewing</title>
+	   <link rel="stylesheet" href="/site.css">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFLoXS1lPMv75OISOZ0GujwAhH1LPlJP4&sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://util.ozrnetworks.com:8080/socket.io/socket.io.js"></script>
+        <script src="iss.js"></script>
+    </head>
+    <body>
+    	<ul>
+    	    <li><a href="/">Home</a></li>
+            <li><a class="active" href="/iss">ISS Viewing</a></li>
+            <li><a href="/snake">Snake Game</a></li>
+            <li><a href="/neptunes-pride-calculator">NP Calc</a></li>
+    	    <li style="float:right"><a href="/about">About</a></li>
+    	</ul>
+    	<div>
+    	    <h3 class="center-text">LIVE Viewing of the Inside and Outside of the Internation Space Station</h3>
+    	</div>
+    	<div class="container">
+            <div>
+            	<iframe src="https://www.ustream.tv/embed/9408562?html5ui=1&autoplay=true" width="720" height="480" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            </div>
+    	    <div>
+                <div id="map"></div>
+    	    </div>
+            <div>
+                <iframe src="https://www.ustream.tv/embed/17074538?html5ui=1&autoplay=true" width="720" height="480" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            </div>
+    	</div>
+        <div class="container">
+            <div>
+                <iframe src="https://www.ustream.tv/embed/6540154?html5ui=1&autoplay=true" width="720" height="480" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            </div>
+            <div>
+                <div id="map"></div>
+            </div>
+            <div>
+                <iframe src="https://www.ustream.tv/embed/10414700?html5ui=1&autoplay=true" width="720" height="480" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <p class="center-text">If the screens are blank or black, either the station is on the night side of Earth, or the station is experiencing a temporary loss of signal.</p>
+                <p class="center-text">Audio between Mission Control on the Ground and the ISS can be heard. This is from the left video, if you need to mute it.</p>
+                <p class="center-text" id="result">Users Online = 0</p>
+            </div>
+        </div>
+    </body>
+</html>
+
