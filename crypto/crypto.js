@@ -3,11 +3,19 @@ $(document).ready(function() {
 });
 
 
-$('#clear-txt-btn').click(function (){
-    var clearTxt = $('#clear-txt').val();
-    console.log(clearTxt);
-    console.log(encrypt(clearTxt));
-})
+function eButton(){
+    var dTxt = $('#clear-txt').val();
+    $('#clear-txt').val('');
+    var eTxt = (encrypt(dTxt));
+    $('#enc-txt').val(eTxt);
+}
+
+function dButton(){
+    var eTxt = $('#enc-txt').val();
+    $('#enc-txt').val('');
+    var dTxt = (decrypt(eTxt));
+    $('#clear-txt').val(dTxt);
+}
 
 function encrypt(message = '', key = ''){
     var message = CryptoJS.AES.encrypt(message, key);
