@@ -76,3 +76,22 @@ li a:hover:not(.active) {
 {
     float: right;
 }
+
+.crypto-box 
+{
+    border: #111 solid;
+}
+
+.crypto-btn
+{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.crypto-div
+{
+    margin-top: 10px;
+    margin-left: 50px;
+}

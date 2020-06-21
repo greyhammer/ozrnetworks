@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+d<!DOCTYPE html>
 <html lang="eng">
     <head>
         <meta charset="utf-8"/>
@@ -19,11 +19,18 @@
     	</ul>
     	<div>
             <h3 class="center-text">Text Encrypting</h3>
-            <textarea  id="clear-txt" rows="15" cols="60"></textarea>
-            <button id="clear-txt-btn" onclick="eButton()">Encrypt</button>
-            <br/>
-            <textarea  id="enc-txt" rows="15" cols="60"></textarea>
-            <button id="enc-txt-btn"  onclick="dButton()">Decrypt</button>
+            <p class="center-text">Type text into the first box, and hit encrypt, the encypted output will be pasted into the sencond box.</p>
+            <p class="center-text">Paste encrypted text into the second box, and hit decrypt, the unencrypted output will be pasted into the first box.</p>
+            <div class="crypto-div">
+                <label>Clear Text</label><br/>
+                <textarea id="clear-txt" class="crypto-box" rows="15" cols="60"></textarea>
+                <button id="clear-txt-btn" class="crypto-btn" onclick="eButton()">Encrypt</button>
+            </div>
+            <div class="crypto-div">
+                <label>Encrypted Text</label><br/>
+                <textarea id="enc-txt" class="crypto-box" rows="15" cols="60"></textarea>
+                <button id="enc-txt-btn" class="crypto-btn" onclick="dButton()">Decrypt</button>
+            </div>
     	</div>
 
     </body>
